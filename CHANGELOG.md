@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## [3.0.0] - 2026/05/19
+
+### Flutter Update
+
+- Compatibility with Flutter 3.43+, which marked `IconData` as a `final` class ([breaking change](https://docs.flutter.dev/release/breaking-changes/icondata-class-marked-final)).
+- Bumps minimum Dart SDK to 3.0.0 and minimum Flutter to 3.0.0.
+
+### Migration Guide
+- `PhosphorIconData` is now a `typedef` for `IconData`; existing references keep compiling. `PhosphorFlatIconData` and `PhosphorDuotoneIconData` have been removed.
+- `PhosphorIcon` still extends `Icon`, so `find.byIcon` and `find.widgetWithIcon` continue to work.
+- Duotone glyphs are paired via `PhosphorIconsDuotone.secondaryByPrimary` (primary codepoint → secondary `IconData`).
+
 ## [2.1.0] - 2024/05/10
 
 ### New icons
